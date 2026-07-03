@@ -6,8 +6,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # configure Azure OpenAI service client 
-client = OpenAI()
-deployment = "gpt-3.5-turbo"
+client = OpenAI(
+    api_key=os.environ.get('DEEPSEEK_API_KEY'),
+    base_url="https://api.deepseek.com")
+
+deployment="deepseek-v4-flash"
 
 no_recipes = input("No of recipes (for example, 5: ")
 
