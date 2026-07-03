@@ -179,7 +179,7 @@ jupyterhub
 
 ### រត់នៅក្នុង container
 
-មួយជំនួសដើម្បីកំណត់របស់របរទាំងអស់នៅលើកុំព្យូទ័ររបស់អ្នក ឬ Codespace គឺប្រើ [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>)។ថត `.devcontainer` ពិសេសនៅក្នុង repo វគ្គ ធ្វើឱ្យ VS Code អាចបង្កើតគម្រោងនៅក្នុង container បាន។ នៅខាងក្រៅ Codespaces វាចាំបាច់តំឡើង Docker ហើយ វាពិតជាលំបាកមួយចំនួន ដូច្នេះយើងណែនាំសម្រាប់អ្នកដែលមានបទពិសោធន៍ក្នុងការ ប្រើ container ប៉ុណ្ណោះ។
+មួយជំនួសដើម្បីកំណត់របស់របរទាំងអស់នៅលើកុំព្យូទ័ររបស់អ្នក ឬ Codespace គឺប្រើ [container](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst)។ថត `.devcontainer` ពិសេសនៅក្នុង repo វគ្គ ធ្វើឱ្យ VS Code អាចបង្កើតគម្រោងនៅក្នុង container បាន។ នៅខាងក្រៅ Codespaces វាចាំបាច់តំឡើង Docker ហើយ វាពិតជាលំបាកមួយចំនួន ដូច្នេះយើងណែនាំសម្រាប់អ្នកដែលមានបទពិសោធន៍ក្នុងការ ប្រើ container ប៉ុណ្ណោះ។
 
 វិធីល្អបំផុតក្នុងការការពារអាសយដ្ឋាន API key របស់អ្នកពេលប្រើ GitHub Codespaces គឺដោយប្រើ Codespace Secrets។ សូមអនុវត្តតាម [មគ្គុទេសក៍គ្រប់គ្រងសម្ងាត់ Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) ដើម្បីស្វែងយល់បន្ថែម។
 
