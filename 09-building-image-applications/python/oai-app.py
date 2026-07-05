@@ -9,20 +9,20 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # SECURITY: Validate API key is present
-api_key = os.getenv('OPENAI_API_KEY')
-if not api_key:
-    raise ValueError("OPENAI_API_KEY environment variable is required. Please set it in your .env file.")
-
-client = OpenAI(api_key=api_key)
-
+client = OpenAI(
+    api_key=os.environ.get('IMAGE_API'),
+    base_url="https://www.packyapi.com/v1")
 
 try:
     # Create an image by using the image generation API
     generation_response = client.images.generate(
-        model="dall-e-3",
+        model="gpt-image-2",
         prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
         size='1024x1024',
-        n=1
+        n=1,
+        response_format='url',
+        quality='high',
+        output_format='png'
     )
     # Set the directory for the stored image
     image_dir = os.path.join(os.curdir, 'images')
@@ -35,7 +35,7 @@ try:
     image_path = os.path.join(image_dir, 'generated-image.png')
 
     # Retrieve the generated image
-    print(generation_response)
+    print(generation_response.data[0].url)
 
     image_url = generation_response.data[0].url  # extract image URL from response
 
@@ -62,8 +62,8 @@ except OpenAIError as err:
 # ---creating variation below---
 
 
-response = client.images.create_variation(
-  image=open(image_path, "rb"),
-  n=1,
-  size="1024x1024"
-)
+# response = client.images.create_variation(
+#   image=open(image_path, "rb"),
+#   n=1,
+#   size="1024x1024"
+# )
